@@ -1,0 +1,25 @@
+Flesch Indices
+source:
+- excel
+- txt-dateien --> Excel mit Dateinamen anstelle Text in Excel zu ziehen [1 Zelle pro Text]
+--> daneben Indices
+
+von Jana Lüdtke an alle:    12:47 PM
+https://en.wikipedia.org/wiki/Automated_readability_index
+
+von Jana Lüdtke an alle:    12:48 PM
+https://en.wikipedia.org/wiki/Gunning_fog_index
+
+Flesch-kincaid
+ARI
+Gunning-Fog-Index
+
+Tele am 10.03.2021
+Wortfrequenz = Sprachgebrauch
+Excel = spalte E = Subtlex
+Testtabelle aus SLS Lesescreening für Kinder
+Normwerte Leseperformance sätze bearbeiten in 3 minuten = Mittelwert 60
+--> Lesequotient = Beginn 2. Klasse 30 Sätze in 3 Minuten
+--> Lesequotient = Erwachsene mit Leseschwächer teilweise 20 Sätze in 3 Minuten
+Endgoal = erstellen eines SLS für Erwachsene mit Erwachseneninhalten, derzeitge Version zu sehr Kinderinhalte
+
