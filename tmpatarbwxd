@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 10 20:08:28 2021
+Spyder Editor
+
+- Input: Excel files with given Text per line in column b
+- Calculation of readability indices [columns d-f]: Flesch-Kincaid-Grade-Level, Gunning-Fog-Index, Automated readability index [ARI]
+- Calculation of following parameters per text/line [columens e-l]: No. of sentences, subsentences, words, nouns, verbs, adjectives
+- calculation of word frequences based on SUBTLEX-DE [column m]
+
+optional: writing txt-files to generate excel-file
+
+@author: Dennis Winter-Extra
+"""
+
+
+
+file_name =  'SLS_2-9_Digital.xlsx'
+sheet = None
+
+import pandas as pd
+df = pd.read_excel(io=file_name)
+print(df.head(5))  # print first 5 rows of the dataframe

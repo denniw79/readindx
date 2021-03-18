@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 10 20:08:28 2021
+Spyder Editor
+
+- Input: Excel files with given Text per line in column b
+- Calculation of readability indices [columns d-f]: Flesch-Kincaid-Grade-Level, Gunning-Fog-Index, Automated readability index [ARI]
+- Calculation of following parameters per text/line [columens e-l]: No. of sentences, subsentences, words, nouns, verbs, adjectives
+- calculation of word frequences based on SUBTLEX-DE [column m]
+
+optional: writing txt-files to generate excel-file
+
+@author: Dennis Winter-Extra
+"""
+
+
+
+file_name =  'SLS_2-9_Digital.xlsx'
+output_file_name = 'output_readability_indices.xlsx'
+sheet = 0
+
+import pandas as pd
+import textstat as txtst
+txtst.set_lang('de_DE')
+#import nltk 
+output = []
+
+df = pd.read_excel(io=file_name, sheet_name=sheet)
+#print(df.head(5))  # print first 5 rows of the dataframe
+for index, row in df.iterrows():
+    #print(index, row[0], row[1])
+    fleschk = txtst.flesch_kincaid_grade(row[1])
+    gunningf = txtst.gunning_fog(row[1])
+    ari = txtst.automated_readability_index(row[1])
+    #nouns = sum(1 for word, pos in pos_tag(word_tokenize(row[1])) if pos.startswith('NN'))
+    
+    output.append([row[0], row[1], row[2], fleschk, gunningf, ari, txtst.sentence_count(row[1]), '', txtst.lexicon_count(row[1]), txtst.syllable_count(row[1])])
+
+outputdf = pd.DataFrame(output, columns=['Satznummer', 'Satz', 'Version', 'Flesch-Kincaid-Grade-Level', 'Gunning-Fog-Index',
+                                         'Automated readability index', '#Sätze', '#Teilsätze', '#Wörter', 'Silben'])
+outputdf.to_excel(output_file_name, index = False)
