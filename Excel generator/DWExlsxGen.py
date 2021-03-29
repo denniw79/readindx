@@ -4,7 +4,7 @@ Created on Mon Mar 29 16:51:30 2021
 
 DWExlsxGenerator
 
-Writes txt-files into xlsx-table for use with calculation of readibility with DWEreadabilityCalcultor.
+Writes txt-files into xlsx-table for use with DWEreadabilityCalcultor.
 
 @author: Dennis[DWE]Winter-Extra
 """
