@@ -3,7 +3,7 @@
 Created on Wed Mar 10 20:08:28 2021
 Spyder Editor
 
-DWERCreadabilityCalcultor
+DWERC[readabilityCalcultor]
 
 - Input: xslx-table with given Text per line in column b *** to build xlsx-table from txt-files use DWExlsxGenerator ***
 - Calculation of readability indices [columns d-g]: Flesch-Kincaid-Grade-Level [FKGL], Flesch-Reading-Ease (Deutsch) [FRE], Gunning-Fog-Index [GFI], Automated readability index [ARI]
